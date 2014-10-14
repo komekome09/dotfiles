@@ -1,0 +1,36 @@
+[user]
+	name = komekome09
+	email = fanmaskome@gmail.com
+	editor = vim
+[alias]
+	co = checkout
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+	proxy = http://proxy.uec.ac.jp:8080
+[https]
+	proxy = http://proxy.uec.ac.jp:8080
+[url "https://"]
+	insteadOf = git://

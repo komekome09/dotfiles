@@ -1,0 +1,43 @@
+### color ###
+autoload -U colors
+colors
+autoload -Uz compinit
+compinit
+autoload -Uz zmv
+
+### prompt ###
+PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ %{$reset_color%}%# "
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
+### export ###
+export PATH=/usr/texbin:$PATH
+export PATH=/opt:$PATH
+export PATH=/usr/local/CrossPack-AVR/bin:$PATH
+export PATH=/opt/local/bin:$PATH
+
+### alias ###
+alias ls='ls -GF'
+alias ll='ls -l'
+alias la='ls -a'
+alias l='ls'
+alias rezsh='source ~/.zshrc'
+alias pswitch=~/.ch_proxy.sh
+
+### cd function ###
+function cd() {
+	builtin cd $@ && ls;
+}
+
+### tmux ###
+# tmux is already started?
+if [[ -z "$TMUX" && ! -z "$PS1" ]]; then
+		tmux attach;
+
+		# if not detach
+		if [ $? ]; then
+				tmux;
+		fi
+fi
+
+### proxy switch ###
+source ~/.ch_proxy.sh
