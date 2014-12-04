@@ -1,0 +1,10 @@
+pane	0	0	:zsh	0	: 	1	:/Users/komekome09	1	zsh	:
+pane	0	1	:alm	0	:-	1	:/Users/komekome09/alm/xbee/raspi_xbee	1	zsh	:
+pane	0	2	:icpc	0	: 	1	:/Users/komekome09/icpc/poj	0	vim	:vim 3041.cpp
+pane	0	2	:icpc	0	: 	2	:/Users/komekome09/icpc/poj	1	zsh	:
+pane	0	3	:zsh	1	:*	1	:/Users/komekome09/repo/5	1	zsh	:
+window	0	0	0	: 	d27d,169x39,0,0,0
+window	0	1	0	:-	d281,169x39,0,0,4
+window	0	2	0	: 	58ff,169x39,0,0{87x39,0,0,2,81x39,88,0,3}
+window	0	3	1	:*	d283,169x39,0,0,6
+state	0	

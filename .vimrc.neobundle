@@ -1,0 +1,41 @@
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+	set runtimepath+=~/.vim/bundle/neobundle.vim
+	call neobundle#begin(expand('~/.vim/bundle'))
+	NeoBundleFetch 'Shougo/neobundle.vim'
+	call neobundle#end()
+endif
+
+
+" auto complete
+NeoBundle 'Shougo/neocomplete.vim'
+" auto complete of snippet
+NeoBundle 'Shougo/neosnippet'
+" snippets set
+NeoBundle 'Shougo/neosnippet-snippets'
+" change statusline
+NeoBundle 'itchyny/lightline.vim'
+" add annotation
+NeoBundle 'tyru/caw.vim.git'
+" permutation
+NeoBundle 'osyo-manga/vim-over'
+" arduino syntax
+NeoBundle "sudar/vim-arduino-syntax"
+
+"#### neocomplete ####
+let g:neocomplete#enable_at_startup = 1
+"#### lightline ####
+set laststatus=2
+set t_Co=256
+let g:lightline = {
+			\ 'colorscheme': 'wombat',
+			\ 'component': {
+			\ 	'readonly': '%{&readonly?"":""}',
+			\ },
+			\ 'separator': {'left': '', 'right': ''},
+			\ 'subseparator': {'left': '', 'right': ''},
+			\ }
+
+filetype plugin indent on

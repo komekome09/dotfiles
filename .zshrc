@@ -10,10 +10,14 @@ PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 ### export ###
+export PATH=/usr/local/bin:$PATH
 export PATH=/usr/texbin:$PATH
 export PATH=/opt:$PATH
 export PATH=/usr/local/CrossPack-AVR/bin:$PATH
 export PATH=/opt/local/bin:$PATH
+export TERM=xterm-256color
+export PATH="$PATH:/Applications/android-sdk/sdk/platform-tools"
+export PATH="$PATH:$HOME/.gem/ruby/2.0.0/bin"
 
 ### alias ###
 alias ls='ls -GF'

@@ -24,3 +24,8 @@ set backspace=start,eol,indent
 
 "#### character code ####
 set encoding=utf-8 
+
+"#### another setting file ####
+if filereadable(expand('~/.vimrc.neobundle')) "is file readable?
+	source ~/.vimrc.neobundle
+endif
