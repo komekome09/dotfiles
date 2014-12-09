@@ -4,6 +4,7 @@ syntax on " color syntax of editor
 set tabstop=4 " indent = space x 4
 set shiftwidth=4
 set smartindent " auto indent
+set autowrite
 
 "#### search setting ####
 set ignorecase " case-insensitive(not tell large character from small character) in serach

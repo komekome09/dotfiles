@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/komekome09/xbee/libxbee3/make'
 let g:netrw_dirhist_2='/Users/komekome09/icpc/poj/.git'
+let g:netrw_dirhist_3='/Users/komekome09/alm/server/nodeid-translate'
+let g:netrw_dirhist_4='/Users/komekome09/repo/.git'
+let g:netrw_dirhist_5='/Users/komekome09/dotfiles/.git'

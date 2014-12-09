@@ -1,0 +1,15 @@
+pane	0	0	:zsh	0	: 	1	:/Users/komekome09	1	zsh	:
+pane	0	1	:edpj	0	: 	1	:/Users/komekome09/alm/raspi_xbee	1	vim	:vim write.py read.py
+pane	0	2	:edpj-test	1	:*	1	:/Users/komekome09/alm/raspi_xbee	0	Python	:/usr/local/Cellar/python/2.7.8_2/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python read.py .
+pane	0	2	:edpj-test	1	:*	2	:/Users/komekome09/alm/raspi_xbee	1	zsh	:
+pane	0	3	:edpj-ser	0	:-	1	:/Users/komekome09/alm/raspi_xbee	1	vim	:vim ser.py
+pane	0	4	:zsh	0	: 	1	:/Users/komekome09	1	zsh	:
+pane	0	5	:icpc	0	: 	1	:/Users/komekome09/icpc/poj	0	vim	:vim 3041.cpp
+pane	0	5	:icpc	0	: 	2	:/Users/komekome09/icpc/poj	1	zsh	:
+window	0	0	0	: 	d27d,169x39,0,0,0
+window	0	1	0	: 	d286,169x39,0,0,9
+window	0	2	1	:*	c414,169x39,0,0{87x39,0,0,18,81x39,88,0,19}
+window	0	3	0	:-	e96f,169x39,0,0,20
+window	0	4	0	: 	d283,169x39,0,0,6
+window	0	5	0	: 	58ff,169x39,0,0{87x39,0,0,2,81x39,88,0,3}
+state	0	0

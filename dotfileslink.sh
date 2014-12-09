@@ -10,3 +10,4 @@ ln -s $HOME/dotfiles/.ssh/config ~/.ssh/config
 ln -s $HOME/dotfiles/.vim ~/.vim
 ln -s $HOME/dotfiles/.gemrc ~/.gemrc
 ln -s $HOME/dotfiles/.tmux ~/.tmux
+ln -s $HOME/dotfiles/.gitignore ~/.gitignore

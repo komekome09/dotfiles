@@ -8,7 +8,6 @@ if has('vim_starting')
 	call neobundle#end()
 endif
 
-
 " auto complete
 NeoBundle 'Shougo/neocomplete.vim'
 " auto complete of snippet
@@ -23,9 +22,13 @@ NeoBundle 'tyru/caw.vim.git'
 NeoBundle 'osyo-manga/vim-over'
 " arduino syntax
 NeoBundle "sudar/vim-arduino-syntax"
+" vim quickrun
+NeoBundle "thinca/vim-quickrun"
 
 "#### neocomplete ####
 let g:neocomplete#enable_at_startup = 1
+filetype plugin indent on
+
 "#### lightline ####
 set laststatus=2
 set t_Co=256
@@ -38,4 +41,12 @@ let g:lightline = {
 			\ 'subseparator': {'left': '', 'right': ''},
 			\ }
 
-filetype plugin indent on
+"#### vim-quickrun ####
+let g:quickrun_config = {}
+let g:quickrun_config['tex'] = {
+			\  'command': 'latexmk',
+			\  'outputter': 'error',
+			\  'outputter/error/error' : 'quickfix',
+			\   'cmdopt': '-pdfdvi',
+			\   'exec': ['%c %o %s']
+			\ }
