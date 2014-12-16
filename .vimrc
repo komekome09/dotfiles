@@ -22,6 +22,10 @@ set display=lastline " if display size is changed, display character as possible
 
 "#### key map ####
 set backspace=start,eol,indent
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 
 "#### character code ####
 set encoding=utf-8 

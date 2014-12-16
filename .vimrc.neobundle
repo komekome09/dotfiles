@@ -24,6 +24,12 @@ NeoBundle 'osyo-manga/vim-over'
 NeoBundle "sudar/vim-arduino-syntax"
 " vim quickrun
 NeoBundle "thinca/vim-quickrun"
+" vim markdown
+NeoBundle "plasticboy/vim-markdown"
+" vim previm
+NeoBundle "kannokanno/previm"
+" vim open browser
+NeoBundle "tyru/open-browser.vim"
 
 "#### neocomplete ####
 let g:neocomplete#enable_at_startup = 1
@@ -33,20 +39,28 @@ filetype plugin indent on
 set laststatus=2
 set t_Co=256
 let g:lightline = {
-			\ 'colorscheme': 'wombat',
-			\ 'component': {
-			\ 	'readonly': '%{&readonly?"":""}',
-			\ },
-			\ 'separator': {'left': '', 'right': ''},
-			\ 'subseparator': {'left': '', 'right': ''},
-			\ }
+	\ 'colorscheme': 'wombat',
+	\ 'component': {
+	\ 	'readonly': '%{&readonly?"":""}',
+	\ },
+	\ 'separator': {'left': '', 'right': ''},
+	\ 'subseparator': {'left': '', 'right': ''},
+	\ }
 
 "#### vim-quickrun ####
-let g:quickrun_config = {}
+let g:quickrun_config = {
+	\ "_" : {
+	\ 	"outputter/buffer/split": ":botright",
+	\	"outputter/buffer/close_on_empty": 1
+	\ },
+	\}
 let g:quickrun_config['tex'] = {
-			\  'command': 'latexmk',
-			\  'outputter': 'error',
-			\  'outputter/error/error' : 'quickfix',
-			\   'cmdopt': '-pdfdvi',
-			\   'exec': ['%c %o %s']
-			\ }
+	\ 'command': 'latexmk',
+	\ 'outputter': 'error',
+	\ 'outputter/error/error': 'quickfix',
+	\ 'cmdopt': '-pdfdvi',
+	\ 'exec': ['%c %o %s']
+	\ }
+
+"#### vim markdown ####
+au BufRead,BufNewFile *.md set filetype=markdown

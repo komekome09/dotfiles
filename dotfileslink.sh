@@ -11,3 +11,4 @@ ln -s $HOME/dotfiles/.vim ~/.vim
 ln -s $HOME/dotfiles/.gemrc ~/.gemrc
 ln -s $HOME/dotfiles/.tmux ~/.tmux
 ln -s $HOME/dotfiles/.gitignore ~/.gitignore
+ln -s $HOME/dotfiles/.latexmkrc ~/.latexmkrc
