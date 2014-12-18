@@ -1,1 +1,0 @@
-/Users/komekome09/dotfiles/.tmux
