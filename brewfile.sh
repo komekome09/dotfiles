@@ -22,6 +22,7 @@ brew install brew-cask
 brew install zsh
 brew install git
 brew install tmux
+brew install lua
 brew install vim --devel --with-lua
 brew install minicom
 brew install doxygen
@@ -30,6 +31,7 @@ brew install qt
 brew install wget
 
 # 必要なもの cask版
+# alfredはバグるので自分で入れる
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install dropbox
@@ -43,7 +45,7 @@ brew cask install sublime-text
 brew cask install limechat
 brew cask install skype
 brew cask install thunderbird
-brew cask install vls
+brew cask install vlc
 brew cask install yorufukurou
 brew cask install xquartz
 brew cask install wireshark
