@@ -5,6 +5,7 @@ set tabstop=4 " indent = space x 4
 set shiftwidth=4
 set smartindent " auto indent
 set autowrite
+set noexpandtab
 
 "#### search setting ####
 set ignorecase " case-insensitive(not tell large character from small character) in serach
@@ -22,6 +23,11 @@ set display=lastline " if display size is changed, display character as possible
 
 "#### key map ####
 set backspace=start,eol,indent
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+inoremap <C-h> <Nop>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>

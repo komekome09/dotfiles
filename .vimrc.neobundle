@@ -17,7 +17,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 " change statusline
 NeoBundle 'itchyny/lightline.vim'
 " add annotation
-NeoBundle 'tyru/caw.vim.git'
+NeoBundle 'tyru/caw.vim'
 " permutation
 NeoBundle 'osyo-manga/vim-over'
 " arduino syntax
@@ -30,6 +30,8 @@ NeoBundle "plasticboy/vim-markdown"
 NeoBundle "kannokanno/previm"
 " vim open browser
 NeoBundle "tyru/open-browser.vim"
+" vim indent line
+"[NeoBundle "Yggdroot/indentLine"
 
 "#### neocomplete ####
 let g:neocomplete#enable_at_startup = 1
@@ -61,6 +63,9 @@ let g:quickrun_config['tex'] = {
 	\ 'cmdopt': '-pdfdvi',
 	\ 'exec': ['%c %o %s']
 	\ }
+
+"#### vim indentline ####
+let g:indentLine_faster = 1
 
 "#### vim markdown ####
 au BufRead,BufNewFile *.md set filetype=markdown

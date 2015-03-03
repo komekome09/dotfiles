@@ -14,6 +14,7 @@ brew install doxygen
 brew install git
 brew install lua
 brew install minicom
+brew install npm
 brew install qt
 brew install tmux
 brew install vim --HEAD --with-lua
