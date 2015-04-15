@@ -22,8 +22,14 @@
 [https]
 [url "https://"]
 [http]
-	proxy = http://proxy.uec.ac.jp:8080
 [https]
-	proxy = http://proxy.uec.ac.jp:8080
 [url "https://"]
-	insteadOf = git://
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]
+[http]
+[https]
+[url "https://"]

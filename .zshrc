@@ -6,7 +6,7 @@ compinit
 autoload -Uz zmv
 
 ### prompt ###
-PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ %{$reset_color%}%# "
+PROMPT="%(?!%F{green}(*'v'*)%f!%F{cyan}(*'o'*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ %{$reset_color%}%# "
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 ### export ###
@@ -18,6 +18,7 @@ export PATH=/usr/local/CrossPack-AVR/bin:$PATH
 export PATH=/opt/local/bin:$PATH
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 export PATH=$PATH:$HOME/opt/review/bin
+export PATH=$PATH:$HOME/opt/scala-2.11.6/bin
 
 ### alias ###
 alias ls='ls -GF'
@@ -45,3 +46,10 @@ fi
 
 ### proxy switch ###
 source ~/.ch_proxy.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
