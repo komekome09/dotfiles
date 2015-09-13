@@ -2,10 +2,11 @@
 set title " show editing file
 syntax on " color syntax of editor
 set tabstop=4 " indent = space x 4
+set softtabstop=4 " To use this param, delete space which number only indent in BS
 set shiftwidth=4
 set smartindent " auto indent
 set autowrite
-set noexpandtab
+set expandtab
 
 "#### search setting ####
 set ignorecase " case-insensitive(not tell large character from small character) in serach
@@ -32,6 +33,7 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+
 
 "#### character code ####
 set encoding=utf-8 

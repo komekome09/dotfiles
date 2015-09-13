@@ -19,6 +19,11 @@ export PATH=/opt/local/bin:$PATH
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 export PATH=$PATH:$HOME/opt/review/bin
 export PATH=$PATH:$HOME/opt/scala-2.11.6/bin
+export PATH=$PATH:$HOME/Applications/Electron.app/Contents/MacOS/
+export PATH=$PATH:$HOME/opt/direnv-2.6.0
+
+### boost
+export BOOST_ROOT=/usr/local/Cellar/boost/1.58.0
 
 ### alias ###
 alias ls='ls -GF'
@@ -26,7 +31,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias l='ls'
 alias rezsh='source ~/.zshrc'
-alias pswitch=~/.ch_proxy.sh
 
 ### cd function ###
 function cd() {
@@ -50,6 +54,4 @@ source ~/.ch_proxy.sh
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
