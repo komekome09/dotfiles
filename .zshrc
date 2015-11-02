@@ -12,7 +12,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 ### export ###
 export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/texbin:$PATH
+export PATH=/Library/TeX/texbin:$PATH
 export PATH=/opt:$PATH
 export PATH=/usr/local/CrossPack-AVR/bin:$PATH
 export PATH=/opt/local/bin:$PATH
@@ -31,6 +31,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias l='ls'
 alias rezsh='source ~/.zshrc'
+alias chkdev='ls /dev/ | grep usbserial'
 
 ### cd function ###
 function cd() {
