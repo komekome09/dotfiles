@@ -43,8 +43,8 @@ nnoremap ]Q :<C-u>clast<CR> " 最後へ
 set encoding=utf-8 
 
 "#### another setting file ####
-if filereadable(expand('~/.vimrc.neobundle')) "is file readable?
-	source ~/.vimrc.neobundle
+if filereadable(expand('~/.vimrc.dein')) "is file readable?
+	source ~/.vimrc.dein
 endif
 
 "#### autogroup ####
