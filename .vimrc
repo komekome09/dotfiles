@@ -46,3 +46,14 @@ set encoding=utf-8
 if filereadable(expand('~/.vimrc.neobundle')) "is file readable?
 	source ~/.vimrc.neobundle
 endif
+
+"#### autogroup ####
+augroup BinaryXXD
+  autocmd!
+  autocmd BufReadPre  *.bin let &binary =1
+  autocmd BufReadPost * if &binary | silent %!xxd -g 1
+  autocmd BufReadPost * set ft=xxd | endif
+  autocmd BufWritePre * if &binary | %!xxd -r | endif
+  autocmd BufWritePost * if &binary | silent %!xxd -g 1
+  autocmd BufWritePost * set nomod | endif
+augroup END
