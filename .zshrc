@@ -1,13 +1,10 @@
-### color ###
+### prompt colors ###
 autoload -U colors
 colors
 autoload -Uz compinit
 compinit
 autoload -Uz zmv
 
-### prompt ###
-PROMPT="%(?!%F{green}(*'v'*)%f!%F{cyan}(*'o'*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ %{$reset_color%}%# "
-export LSCOLORS=gxfxcxdxbxegedabagacad
 
 ### export ###
 export TERM=xterm-256color
@@ -31,6 +28,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias l='ls'
 alias rezsh='source ~/.zshrc'
+alias zshrc='vim $HOME/.zshrc'
 alias chkdev='ls /dev/ | grep usbserial'
 
 ### cd function ###
@@ -56,3 +54,18 @@ source ~/.ch_proxy.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
+### show branch info
+autoload -Uz add-zsh-hook
+autoload -Uz vcs_info
+setopt PROMPT_SUBST    # プロンプト表示ごとに変数を展開する
+
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats '%F{green}[%b]%f'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+_vcs_precmd () { vcs_info }  # vcs_info関数を呼び出す。vcs情報はformatsで整形され vcs_info_msg_0_ に挿入される
+add-zsh-hook precmd _vcs_precmd # 上の関数をプロンプト表示前に実行させる
+
+### prompt ###
+PROMPT='%(?!%F{green}(*'v'*)%f!%F{cyan}(*'o'*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ ${vcs_info_msg_0_} %{$reset_color%}%# '
+export LSCOLORS=gxfxcxdxbxegedabagacad
