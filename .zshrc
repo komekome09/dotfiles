@@ -76,6 +76,9 @@ source ~/.ch_proxy.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
+
 ### show branch info
 autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
