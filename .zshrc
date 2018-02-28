@@ -76,6 +76,9 @@ source ~/.ch_proxy.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+export PATH=$PATH:$HOME/.nodebrew/current/bin
+
 ### Added by the Bluemix CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
 
