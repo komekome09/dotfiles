@@ -13,15 +13,21 @@ autoload -Uz zmv
 ### export ###
 export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/opt/llvm/bin:$PATH
 export PATH=/Library/TeX/texbin:$PATH
 export PATH=/opt:$PATH
 export PATH=/usr/local/CrossPack-AVR/bin:$PATH
 export PATH=/opt/local/bin:$PATH
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 export PATH=$PATH:$HOME/opt/review/bin
+export PATH=$PATH:$HOME/opt/bin
 export PATH=$PATH:$HOME/opt/scala-2.11.6/bin
 export PATH=$PATH:$HOME/Applications/Electron.app/Contents/MacOS/
 export PATH=$PATH:$HOME/opt/direnv-2.6.0
+export PATH="$PATH:/Applications/Wine Staging.app/Contents/Resources/wine/bin"
+export PATH="$PATH:$HOME/Library/Python/3.7/bin"
+export PATH="$PATH:$HOME/google-cloud-sdk/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
 
 ### boost
 export BOOST_ROOT=/usr/local/Cellar/boost/1.58.0
@@ -44,9 +50,11 @@ alias l='ls'
 alias rezsh='source ~/.zshrc'
 alias zshrc='vim $HOME/.zshrc'
 alias chkdev='ls /dev/ | grep usbserial'
+alias ctags='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
 ### bind key ###
 bindkey -e
+bindkey "[3~" delete-char
 
 ### cd function ###
 function cd() {
@@ -78,9 +86,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 export PATH=$PATH:$HOME/.nodebrew/current/bin
-
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
 
 ### show branch info
 autoload -Uz add-zsh-hook
