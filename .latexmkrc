@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-$latex                          = 'platex -kanji=utf8 -guess-input-enc -synctex=1 -interaction=nonstopmode %S';
+$latex                          = 'platex -kanji=utf8 -guess-input-enc -synctex=1 -interaction=nonstopmode -file-line-error %S';
 $dvipdf                         = 'dvipdfmx -f ptex-ipaex.map %S';
 $bibtex                         = 'pbibtex -kanji=utf8 %B';
 $pdf_mode                       = 3; # generates pdf via dvipdfmx
