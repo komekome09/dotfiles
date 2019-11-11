@@ -1,6 +1,7 @@
 "#### show setting ####
 set title " show editing file
 syntax on " color syntax of editor
+colorscheme elflord
 set tabstop=4 " indent = space x 4
 set softtabstop=4 " To use this param, delete space which number only indent in BS
 set shiftwidth=4
