@@ -100,5 +100,36 @@ _vcs_precmd () { vcs_info }  # vcs_info関数を呼び出す。vcs情報はforma
 add-zsh-hook precmd _vcs_precmd # 上の関数をプロンプト表示前に実行させる
 
 ### prompt ###
-PROMPT='%(?!%F{green}(*'v'*)%f!%F{cyan}(*'o'*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ ${vcs_info_msg_0_} %{$reset_color%}%# '
+PROMPT='%(?!%F{green}(*'\''v'\''*)%f!%F{cyan}(*'\'''o\''*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ ${vcs_info_msg_0_} %{$reset_color%}%# '
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/komekome09/go-lambda/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/komekome09/go-lambda/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/komekome09/go-lambda/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/komekome09/go-lambda/node_modules/tabtab/.completions/sls.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/komekome09/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/komekome09/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/komekome09/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/komekome09/google-cloud-sdk/completion.zsh.inc'; fi
+
+            fuck () {
+                TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+                export TF_SHELL=zsh;
+                export TF_ALIAS=fuck;
+                TF_SHELL_ALIASES=$(alias);
+                export TF_SHELL_ALIASES;
+                TF_HISTORY="$(fc -ln -10)";
+                export TF_HISTORY;
+                export PYTHONIOENCODING=utf-8;
+                TF_CMD=$(
+                    thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+                ) && eval $TF_CMD;
+                unset TF_HISTORY;
+                export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+                test -n "$TF_CMD" && print -s $TF_CMD
+            }
+        
