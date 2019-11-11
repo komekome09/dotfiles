@@ -1,3 +1,14 @@
+# OS dependent
+case $(uname) in
+    darwin*)
+        echo "darwin"
+        ;;
+    linux*)
+        echo "linux"
+        ;;
+esac
+
+
 ### prompt colors ###
 autoload -U colors
 colors
