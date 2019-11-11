@@ -13,3 +13,6 @@
     cm = commit
 [merge]
 	tool = vimdiff
+    ff = false
+[pull]
+    ff = only
