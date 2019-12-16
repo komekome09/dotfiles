@@ -3,7 +3,6 @@ autoload -U colors
 colors
 
 ### zsh completion
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit -u
 
@@ -11,10 +10,13 @@ compinit -u
 autoload -Uz zmv
 
 ### other
-export EDITOR='/usr/local/bin/vim'
+export EDITOR=$(which vim)
 
 ### history
 export HISTFILE=${HOME}/.zsh_history
+if !directory(${HOME}/.zsh_history)
+    mkdir(${HOME}/.zsh_history)
+endif
 export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
@@ -53,9 +55,6 @@ if [[ -z "$TMUX" && ! -z "$PS1" ]]; then
 		fi
 fi
 
-### proxy switch ###
-source ~/.ch_proxy.sh
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -90,5 +89,3 @@ case $(uname) in
         [ -f $HOME/.zshrc.linux ] && . $HOME/.zshrc.linux
         ;;
 esac
-
-
