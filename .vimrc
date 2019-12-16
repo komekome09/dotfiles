@@ -44,7 +44,7 @@ nnoremap ]Q :<C-u>clast<CR> " 最後へ
 set encoding=utf-8 
 
 "#### another setting file ####
-if filereadable(expand('~/.vimrc.dein')) "is file readable?
+if filereadable(expand('~/.vimrc.dein')) && &runtimepath =~# 'dein.vim' "is file readable and dein.vim installed?
 	source ~/.vimrc.dein
 endif
 
