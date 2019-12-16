@@ -1,14 +1,3 @@
-# OS dependent
-case $(uname) in
-    darwin*)
-        echo "darwin"
-        ;;
-    linux*)
-        echo "linux"
-        ;;
-esac
-
-
 ### prompt colors ###
 autoload -U colors
 colors
@@ -20,28 +9,6 @@ compinit -u
 
 ### zsh mv
 autoload -Uz zmv
-
-### export ###
-export TERM=xterm-256color
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/opt/llvm/bin:$PATH
-export PATH=/Library/TeX/texbin:$PATH
-export PATH=/opt:$PATH
-export PATH=/usr/local/CrossPack-AVR/bin:$PATH
-export PATH=/opt/local/bin:$PATH
-export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
-export PATH=$PATH:$HOME/opt/review/bin
-export PATH=$PATH:$HOME/opt/bin
-export PATH=$PATH:$HOME/opt/scala-2.11.6/bin
-export PATH=$PATH:$HOME/Applications/Electron.app/Contents/MacOS/
-export PATH=$PATH:$HOME/opt/direnv-2.6.0
-export PATH="$PATH:/Applications/Wine Staging.app/Contents/Resources/wine/bin"
-export PATH="$PATH:$HOME/Library/Python/3.7/bin"
-export PATH="$PATH:$HOME/google-cloud-sdk/bin"
-export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
-
-### boost
-export BOOST_ROOT=/usr/local/Cellar/boost/1.58.0
 
 ### other
 export EDITOR='/usr/local/bin/vim'
@@ -60,8 +27,6 @@ alias la='ls -a'
 alias l='ls'
 alias rezsh='source ~/.zshrc'
 alias zshrc='vim $HOME/.zshrc'
-alias chkdev='ls /dev/ | grep usbserial'
-alias ctags='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
 ### bind key ###
 bindkey -e
@@ -113,34 +78,17 @@ add-zsh-hook precmd _vcs_precmd # 上の関数をプロンプト表示前に実�
 ### prompt ###
 PROMPT='%(?!%F{green}(*'\''v'\''*)%f!%F{cyan}(*'\'''o\''*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ ${vcs_info_msg_0_} %{$reset_color%}%# '
 export LSCOLORS=gxfxcxdxbxegedabagacad
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/komekome09/go-lambda/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/komekome09/go-lambda/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/komekome09/go-lambda/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/komekome09/go-lambda/node_modules/tabtab/.completions/sls.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/komekome09/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/komekome09/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/komekome09/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/komekome09/google-cloud-sdk/completion.zsh.inc'; fi
-
-            fuck () {
-                TF_PYTHONIOENCODING=$PYTHONIOENCODING;
-                export TF_SHELL=zsh;
-                export TF_ALIAS=fuck;
-                TF_SHELL_ALIASES=$(alias);
-                export TF_SHELL_ALIASES;
-                TF_HISTORY="$(fc -ln -10)";
-                export TF_HISTORY;
-                export PYTHONIOENCODING=utf-8;
-                TF_CMD=$(
-                    thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
-                ) && eval $TF_CMD;
-                unset TF_HISTORY;
-                export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
-                test -n "$TF_CMD" && print -s $TF_CMD
-            }
         
+# OS dependent
+case $(uname) in
+    darwin*)
+        echo "darwin"
+        [ -f $HOME/.zshrc.darwin ] && . $HOME/.zshrc.darwin
+        ;;
+    linux*)
+        echo "linux"
+        [ -f $HOME/.zshrc.linux ] && . $HOME/.zshrc.linux
+        ;;
+esac
+
+
