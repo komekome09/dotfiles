@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ln -s $HOME/dotfiles/.zshrc ~/.zshrc
+ln -s $HOME/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s $HOME/dotfiles/zsh/.zshrc.local ~/.zshrc.local
 ln -s $HOME/dotfiles/.vimrc ~/.vimrc
 ln -s $HOME/dotfiles/.vimrc.dein ~/.vimrc.dein
 ln -s $HOME/dotfiles/.gitconfig ~/.gitconfig
