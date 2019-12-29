@@ -14,9 +14,9 @@ export EDITOR=$(which vim)
 
 ### history
 export HISTFILE=${HOME}/.zsh_history
-if !directory(${HOME}/.zsh_history)
-    mkdir(${HOME}/.zsh_history)
-endif
+if [[ -f ${HOME}/.zsh_history ]] ; then
+    touch ${HOME}/.zsh_history
+fi
 export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
