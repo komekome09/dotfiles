@@ -54,3 +54,4 @@ brew cask install alfred
 
 # mas
 mas install 490461369 # BandWidth+
+mas install 836505650 # Battery Monitor
