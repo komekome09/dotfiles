@@ -1,14 +1,14 @@
 #!/bin/bash
 
-ln -s $HOME/dotfiles/zsh/.zshrc ~/.zshrc
-ln -s $HOME/dotfiles/zsh/.zshrc.darwin ~/.zshrc.darwin
-ln -s $HOME/dotfiles/zsh/.zshrc.linux ~/.zshrc.linux
-ln -s $HOME/dotfiles/.vimrc ~/.vimrc
-ln -s $HOME/dotfiles/.vimrc.dein ~/.vimrc.dein
-ln -s $HOME/dotfiles/.gitconfig ~/.gitconfig
-ln -s $HOME/dotfiles/.ch_proxy.sh ~/.ch_proxy.sh
-ln -s $HOME/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s $HOME/dotfiles/.ssh/config ~/.ssh/config
-ln -s $HOME/dotfiles/.gemrc ~/.gemrc
-ln -s $HOME/dotfiles/.gitignore ~/.gitignore
-ln -s $HOME/dotfiles/.latexmkrc ~/.latexmkrc
+ln -s $(pwd)/zsh/.zshrc ~/.zshrc
+ln -s $(pwd)/zsh/.zshrc.darwin ~/.zshrc.darwin
+ln -s $(pwd)/zsh/.zshrc.linux ~/.zshrc.linux
+ln -s $(pwd)/.vimrc ~/.vimrc
+ln -s $(pwd)/.vimrc.dein ~/.vimrc.dein
+ln -s $(pwd)/.gitconfig ~/.gitconfig
+ln -s $(pwd)/.ch_proxy.sh ~/.ch_proxy.sh
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/.ssh/config ~/.ssh/config
+ln -s $(pwd)/.gemrc ~/.gemrc
+ln -s $(pwd)/.gitignore ~/.gitignore
+ln -s $(pwd)/.latexmkrc ~/.latexmkrc
