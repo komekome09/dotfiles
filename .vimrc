@@ -16,6 +16,9 @@ set wrapscan " if search is end of line, continue the search on the top
 "#### basic setting ####
 set nocompatible " not vi compatible
 set autoindent " if return, next line's indent is same as above line
+if !isdirectory($HOME."/.vimbak")
+    call mkdir($HOME."/.vimbak")
+endif
 set backupdir=$HOME/.vimbak " directory of backup file
 set directory=$HOME/.vimbak " directory of .swp file
 set number " line number
