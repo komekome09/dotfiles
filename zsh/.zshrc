@@ -44,6 +44,11 @@ function gi() {
     curl -L -s https://www.gitignore.io/api/$@;
 }
 
+### Check exists command ###
+function exists_cmd() {
+    type -a $1 > /dev/null 2>&1;
+}
+
 ### tmux ###
 # tmux is already started?
 if [[ -z "$TMUX" && ! -z "$PS1" ]]; then
@@ -90,7 +95,9 @@ case $(uname) in
         ;;
 esac
 
-source $HOME/.cargo/env
+if ! exists_cmd rustc; then
+    source $HOME/.cargo/env
+fi
 
 if [[ -d $HOME/.nvm ]]; then
     export NVM_DIR="$HOME/.nvm"
