@@ -26,6 +26,8 @@ set noswapfile " not make a swap file
 set viminfo= " not make a .viminfo file
 set display=lastline " if display size is changed, display character as possible
 
+set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
+
 "#### key map ####
 set backspace=start,eol,indent
 nnoremap j gj

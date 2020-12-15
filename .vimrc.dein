@@ -1,5 +1,5 @@
 " dein path
-let s:dein_dir = expand('~/.vim/dein')
+let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 execute 'set runtimepath +=' .  fnamemodify(s:dein_repo_dir, ':p')
 
@@ -33,8 +33,8 @@ let g:lightline = {
 	\ 'component': {
 	\ 	'readonly': '%{&readonly?"":""}',
 	\ },
-	\ 'separator': {'left': '', 'right': ''},
-	\ 'subseparator': {'left': '', 'right': ''},
+	\ 'separator': {'left': '>', 'right': '<'},
+	\ 'subseparator': {'left': '>', 'right': '<'},
 	\ }
 
 "#### vim-quickrun ####
