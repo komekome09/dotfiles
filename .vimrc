@@ -16,8 +16,8 @@ set wrapscan " if search is end of line, continue the search on the top
 "#### basic setting ####
 set nocompatible " not vi compatible
 set autoindent " if return, next line's indent is same as above line
-if !isdirectory($HOME."/.vimbak")
-    call mkdir($HOME."/.vimbak")
+if !isdirectory(expand('$HOME/.vimbak'))
+    call mkdir(expand("$HOME/.vimbak" ))
 endif
 set backupdir=$HOME/.vimbak " directory of backup file
 set directory=$HOME/.vimbak " directory of .swp file
@@ -25,6 +25,8 @@ set number " line number
 set noswapfile " not make a swap file
 set viminfo= " not make a .viminfo file
 set display=lastline " if display size is changed, display character as possible
+
+set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 
 "#### key map ####
 set backspace=start,eol,indent

@@ -44,6 +44,11 @@ function gi() {
     curl -L -s https://www.gitignore.io/api/$@;
 }
 
+### Check exists command ###
+function exists_cmd() {
+    type -a $1 > /dev/null 2>&1;
+}
+
 ### tmux ###
 # tmux is already started?
 if [[ -z "$TMUX" && ! -z "$PS1" ]]; then
@@ -77,8 +82,8 @@ add-zsh-hook precmd _vcs_precmd # 上の関数をプロンプト表示前に実�
 ### prompt ###
 PROMPT='%(?!%F{green}(*'\''v'\''*)%f!%F{cyan}(*'\'''o\''*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ ${vcs_info_msg_0_} %{$reset_color%}%# '
 export LSCOLORS=gxfxcxdxbxegedabagacad
-        
-# OS dependent
+       
+#OS dependent
 case $(uname) in
     darwin*)
         echo "darwin"
@@ -89,3 +94,14 @@ case $(uname) in
         [ -f $HOME/.zshrc.linux ] && . $HOME/.zshrc.linux
         ;;
 esac
+
+if ! exists_cmd rustc; then
+    source $HOME/.cargo/env
+fi
+
+if [[ -d $HOME/.nvm ]]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] &&  \. "$NVM_DIR/nvm.sh" --no-use # This load nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This load nvm bash_completion
+fi
+
