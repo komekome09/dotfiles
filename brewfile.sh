@@ -56,3 +56,4 @@ brew cask install docker
 # mas
 mas install 490461369 # BandWidth+
 mas install 836505650 # Battery Monitor
+mas install 937984704 # Amphetamine
