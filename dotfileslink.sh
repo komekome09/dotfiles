@@ -2,7 +2,7 @@
 
 ln -s $(pwd)/zsh/.zshrc ~/.zshrc
 ln -s $(pwd)/zsh/.zshrc.darwin ~/.zshrc.darwin
-#ln -s $(pwd)/zsh/.zshrc.linux ~/.zshrc.linux
+ln -s $(pwd)/zsh/.zshrc.linux ~/.zshrc.linux
 ln -s $(pwd)/.vimrc ~/.vimrc
 ln -s $(pwd)/.vimrc.dein ~/.vimrc.dein
 ln -s $(pwd)/.gitconfig ~/.gitconfig

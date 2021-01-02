@@ -99,9 +99,3 @@ if ! exists_cmd rustc; then
     source $HOME/.cargo/env
 fi
 
-if [[ -d $HOME/.nvm ]]; then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] &&  \. "$NVM_DIR/nvm.sh" --no-use # This load nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This load nvm bash_completion
-fi
-
