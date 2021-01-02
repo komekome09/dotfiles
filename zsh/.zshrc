@@ -91,10 +91,10 @@ fi
 case $(uname) in
     Darwin*)
         echo "Darwin"
-        [ -f $HOME/.zshrc.darwin ] && . $HOME/.zshrc.darwin
+        [[ -f "$HOME/.zshrc.darwin" ]] && . "$HOME/.zshrc.darwin"
         ;;
     Linux*)
-        echo "linux"
-        [ -f $HOME/.zshrc.linux ] && . $HOME/.zshrc.linux
+        echo "Linux"
+        [[ -f "$HOME/.zshrc.linux" ]] && . "$HOME/.zshrc.linux"
         ;;
 esac
