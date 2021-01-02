@@ -82,20 +82,19 @@ add-zsh-hook precmd _vcs_precmd # 上の関数をプロンプト表示前に実�
 ### prompt ###
 PROMPT='%(?!%F{green}(*'\''v'\''*)%f!%F{cyan}(*'\'''o\''*%)%f) %{$fg[red]%}%n%{$reset_color%}@%{$fg[green]%}%m %{$fg_no_bold[yellow]%}%~ ${vcs_info_msg_0_} %{$reset_color%}%# '
 export LSCOLORS=gxfxcxdxbxegedabagacad
-       
-#OS dependent
-case $(uname) in
-    darwin*)
-        echo "darwin"
-        [ -f $HOME/.zshrc.darwin ] && . $HOME/.zshrc.darwin
-        ;;
-    linux*)
-        echo "linux"
-        [ -f $HOME/.zshrc.linux ] && . $HOME/.zshrc.linux
-        ;;
-esac
 
 if ! exists_cmd rustc; then
     source $HOME/.cargo/env
 fi
-
+       
+#OS dependent
+case $(uname) in
+    Darwin*)
+        echo "Darwin"
+        [ -f $HOME/.zshrc.darwin ] && . $HOME/.zshrc.darwin
+        ;;
+    Linux*)
+        echo "linux"
+        [ -f $HOME/.zshrc.linux ] && . $HOME/.zshrc.linux
+        ;;
+esac
