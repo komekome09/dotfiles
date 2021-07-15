@@ -1,11 +1,19 @@
 " dein path
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-execute 'set runtimepath +=' .  fnamemodify(s:dein_repo_dir, ':p')
 
 if &compatible
     set nocompatible
 endif
+
+if !isdirectory(s:dein_repo_dir)
+    echo "Install dein.vim"
+    execute "!git clone https://www.github.com/Shougo/dein.vim" s:dein_repo_dir
+    execute "!touch -m ". s:dein_dir. "/dein.toml"
+    execute "!touch -m ". s:dein_dir ."/dein_lazy.toml"
+endif
+
+execute 'set runtimepath +=' .  fnamemodify(s:dein_repo_dir, ':p')
 
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
