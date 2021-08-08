@@ -34,11 +34,11 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
-inoremap <C-h> <Nop>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
+inoremap <A-h> <Nop>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-h> <Left>
+inoremap <A-l> <Right>
 "## QuickFix ##
 nnoremap [q :cprevious<CR> " 前へ
 nnoremap ]q :cnext<CR> " 次へ
