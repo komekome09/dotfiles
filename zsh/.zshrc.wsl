@@ -1,0 +1,4 @@
+export PATH="$PATH:$HOME/.opt"
+export PICO_SDK_PATH="$HOME/pico/pico-sdk"
+export PATH="$PATH:/mnt/c/Windows/System32"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/Cellar/imagemagick/7.1.0-32/bin/"

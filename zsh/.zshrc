@@ -11,6 +11,7 @@ autoload -Uz zmv
 
 ### other
 export EDITOR=$(which vim)
+export DISPLAY=:0.0
 
 ### history
 export HISTFILE=${HOME}/.zsh_history
@@ -62,6 +63,7 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$PATH:/home/komekome09/.local/bin
 
 type direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
@@ -96,5 +98,8 @@ case $(uname) in
     Linux*)
         echo "Linux"
         [[ -f "$HOME/.zshrc.linux" ]] && . "$HOME/.zshrc.linux"
+        if [[ $(uname -r) == *microsoft* ]]; then
+            [[ -f "$HOME/.zshrc.wsl" ]] && . "$HOME/.zshrc.wsl"
+        fi
         ;;
 esac
