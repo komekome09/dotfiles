@@ -9,6 +9,13 @@ set smartindent " auto indent
 set autowrite
 set expandtab
 
+"#### Transparancy ####
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
+
 "#### search setting ####
 set ignorecase " case-insensitive(not tell large character from small character) in serach
 set wrapscan " if search is end of line, continue the search on the top
