@@ -11,7 +11,7 @@ autoload -Uz zmv
 
 ### other
 export EDITOR=$(which vim)
-export DISPLAY=:0.0
+#export DISPLAY=:0.0
 
 ### history
 export HISTFILE=${HOME}/.zsh_history
@@ -52,13 +52,15 @@ function exists_cmd() {
 
 ### tmux ###
 # tmux is already started?
-if [[ -z "$TMUX" && ! -z "$PS1" ]]; then
-		tmux attach;
+if type tmux > /dev/null; then
+    if [[ -z "$TMUX" && ! -z "$PS1" ]]; then
+            tmux attach;
 
-		# if not detach
-		if [ $? ]; then
-				tmux;
-		fi
+            # if not detach
+            if [ $? ]; then
+                    tmux;
+            fi
+    fi
 fi
 
 ### Added by the Heroku Toolbelt
