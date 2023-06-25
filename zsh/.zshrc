@@ -22,6 +22,7 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
+function hist-all { history -E 1 }
 
 ### alias ###
 alias ls='ls -GF'
